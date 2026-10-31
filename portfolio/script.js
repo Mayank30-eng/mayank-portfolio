@@ -2,6 +2,10 @@
    Mayank Portfolio — JavaScript
    ═══════════════════════════════════════════════════ */
 
+// Vercel Speed Insights
+import { injectSpeedInsights } from '@vercel/speed-insights';
+injectSpeedInsights();
+
 (function () {
   'use strict';
 
@@ -292,7 +296,7 @@
     }, { passive: true });
   }
 
-  /* ─────────────────────────────────────────────────
+  /* ────────────────────────────────────────────────���
      GLITTER WARP — Starfield warp tunnel background
      ───────────────────────────────────────────────── */
   function initGlitterWarp() {
