@@ -1,0 +1,935 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <title>Mayank | Backend Developer</title>
+    <meta
+      name="description"
+      content="Mayank — Computer Science Engineering graduate and backend-focused full stack developer. Building scalable web apps, REST APIs, and authentication systems with Node.js, Express, MongoDB, and React."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mayank | Backend Developer" />
+    <meta
+      property="og:description"
+      content="Backend-focused Full Stack Developer specializing in Node.js, Express.js, MongoDB, and React."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mayank | Backend Developer" />
+    <meta
+      name="twitter:description"
+      content="Backend-focused Full Stack Developer specializing in Node.js, Express.js, MongoDB, and React."
+    />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mayank",
+        "jobTitle": "Backend-focused Full Stack Developer",
+        "knowsAbout": [
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "React.js",
+          "REST APIs",
+          "JavaScript"
+        ]
+      }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Background layers -->
+    <div class="bg-layer bg-grid"></div>
+    <div class="bg-layer bg-dots-base"></div>
+    <div class="bg-layer bg-glow-torch"></div>
+    <div class="bg-layer bg-grid-torch"></div>
+    <div class="bg-layer bg-dots-torch"></div>
+    <div class="bg-layer bg-vignette"></div>
+
+    <!-- Header / Navigation -->
+    <header class="topbar" id="topbar">
+      <div class="topbar-inner">
+        <a href="#top" class="logo-link">
+          <span class="logo-dot" aria-hidden="true"></span>
+          <span class="logo-text">mayank</span>
+          <span class="logo-suffix">.dev</span>
+        </a>
+
+        <nav class="nav-desktop" aria-label="Primary">
+          <a href="#top" class="nav-link nav-link--active" data-section="top"
+            >home</a
+          >
+          <a href="#projects" class="nav-link" data-section="projects"
+            >projects</a
+          >
+          <a href="#skills" class="nav-link" data-section="skills">skills</a>
+          <a href="#contact" class="nav-link" data-section="contact">contact</a>
+        </nav>
+
+        <div class="topbar-actions">
+          <button
+            class="icon-btn"
+            id="theme-toggle"
+            aria-label="Switch to light theme"
+          >
+            <svg
+              class="icon-sun"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+              ></path>
+            </svg>
+            <svg
+              class="icon-moon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              style="display: none"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button
+            class="icon-btn mobile-menu-btn"
+            id="mobile-menu-toggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M2 4h12M2 8h12M2 12h12"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+    <aside
+      class="mobile-drawer"
+      id="mobile-drawer"
+      aria-label="Mobile navigation"
+    >
+      <div class="mobile-drawer-header">
+        <a href="#top" class="logo-link">
+          <span class="logo-dot" aria-hidden="true"></span>
+          <span class="logo-text">mayank</span>
+          <span class="logo-suffix">.dev</span>
+        </a>
+        <button
+          class="mobile-close-btn"
+          id="mobile-close"
+          aria-label="Close menu"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+            aria-hidden="true"
+          >
+            <path
+              d="M5 5l10 10M15 5L5 15"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <nav class="mobile-nav" aria-label="Mobile Primary">
+        <a href="#top" class="mobile-nav-link mobile-nav-link--active">home</a>
+        <a href="#projects" class="mobile-nav-link">projects</a>
+        <a href="#skills" class="mobile-nav-link">skills</a>
+        <a href="#contact" class="mobile-nav-link">contact</a>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <!-- ═══════════ HERO SECTION ═══════════ -->
+      <section class="hero-section" id="top">
+        <div class="hero-grid">
+          <!-- Left: intro -->
+          <div class="hero-intro">
+            <div class="status-badge">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>AVAILABLE · open to opportunities</span>
+            </div>
+
+            <h1 class="hero-heading">
+              <span class="hero-prompt">$ </span>hi, I'm
+              <span class="accent">Mayank</span
+              ><span class="cursor-blink" aria-hidden="true"></span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Backend-focused Full Stack Developer | CSE Graduate
+            </p>
+
+            <p class="hero-description">
+              I build
+              <em class="accent-em">scalable web applications end-to-end</em> —
+              REST APIs, authentication systems, database architectures, and
+              modern frontend experiences. My core stack is
+              <em class="accent-em">Node.js, Express.js, MongoDB</em> and
+              <em class="accent-em">React.js</em>, and I'm passionate about
+              writing clean, maintainable backend code that powers real
+              products.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">get in touch</a>
+              <a href="#projects" class="btn btn-default">ls projects/</a>
+              <div class="hero-socials">
+                <a
+                  href="https://github.com/Mayank30-eng"
+                  class="btn btn-icon"
+                  aria-label="GitHub Profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id="github-link"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.05.78 2.13v3.16c0 .31.21.68.79.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/mayank-gohiya-7b7974250/"
+                  class="btn btn-icon"
+                  aria-label="LinkedIn Profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id="linkedin-link"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S.02 4.88.02 3.5 1.13 1 2.5 1s2.48 1.12 2.48 2.5M.22 8h4.56v14H.22zm7.5 0h4.37v1.91h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.47 3.04 5.47 7V22h-4.56v-6.61c0-1.58-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.49V22H7.72z"
+                    ></path>
+                  </svg>
+                </a>
+                <a
+                  href="mailto:mayankgohiya657@gmail.com"
+                  class="btn btn-icon"
+                  aria-label="Email"
+                  id="email-link"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  >
+                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                    <path d="M3 7l9 6 9-6"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: chat terminal -->
+          <div class="chat-terminal" id="chat">
+            <!-- Corner accents -->
+            <span class="corner-accent corner-tl"></span>
+            <span class="corner-accent corner-tr"></span>
+            <span class="corner-accent corner-bl"></span>
+            <span class="corner-accent corner-br"></span>
+
+            <!-- Terminal header -->
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot"></span>
+                <span class="terminal-dot terminal-dot--active"></span>
+              </div>
+              <span class="terminal-title">~/ask-me.sh</span>
+              <span class="terminal-status">
+                <span class="status-blip" aria-hidden="true"></span>ready
+              </span>
+            </div>
+
+            <!-- Chat messages area -->
+            <div
+              class="chat-messages"
+              id="chat-messages"
+              aria-live="polite"
+              aria-label="Chat messages"
+            >
+              <div class="chat-msg">
+                <div class="chat-msg-label">// system</div>
+                <div class="chat-msg-text">
+                  connected to mayank.dev — ask anything about Mayank.
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick questions -->
+            <div class="chat-chips" id="chat-chips">
+              <button class="chip" data-question="What is Mayank's tech stack?">
+                what is your stack?
+              </button>
+              <button
+                class="chip"
+                data-question="What backend technologies does Mayank use?"
+              >
+                backend technologies?
+              </button>
+              <button
+                class="chip"
+                data-question="Tell me about Mayank's projects"
+              >
+                tell me about projects
+              </button>
+              <button
+                class="chip"
+                data-question="Is Mayank available for hire?"
+              >
+                available for hire?
+              </button>
+            </div>
+
+            <!-- Chat input -->
+            <form class="chat-form" id="chat-form">
+              <div class="chat-input-wrapper">
+                <span class="chat-prompt" aria-hidden="true">›</span>
+                <input
+                  type="text"
+                  class="chat-input"
+                  id="chat-input"
+                  aria-label="Ask about Mayank"
+                  placeholder="ask anything about Mayank…"
+                  autocomplete="off"
+                />
+                <button class="btn btn-ghost" type="submit" id="chat-send">
+                  <span class="send-label">send </span>↵
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════ PROJECTS SECTION ═══════════ -->
+      <section class="section" id="projects">
+        <div class="section-header">
+          <div>
+            <div class="section-label">
+              <span class="accent">02</span>FEATURED WORK
+            </div>
+            <h2 class="section-title">Selected projects</h2>
+          </div>
+          <div class="section-aside">
+            ~/projects/featured<br />
+            <span class="text-faint">4 projects</span>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Backend Ledger API -->
+          <article class="project-card">
+            <div class="project-number">[01]</div>
+            <h3 class="project-title">Backend Ledger API</h3>
+            <div class="project-meta">
+              <span>2024</span>
+              <span class="meta-dot">·</span>
+              <span>Backend Developer</span>
+            </div>
+            <p class="project-desc">
+              Secure financial ledger API with JWT authentication, MongoDB
+              transactions, immutable ledger entries, balance tracking, fund
+              transfers, and idempotency keys. Built end-to-end with Node.js and
+              Express.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">JWT</span>
+              <span class="tag">bcrypt</span>
+              <span class="tag">Nodemailer</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/Mayank30-eng/Backend-Ledger"
+                class="project-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Backend Ledger API GitHub repository"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.05.78 2.13v3.16c0 .31.21.68.79.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"
+                  ></path>
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <!-- Live Demo: Configurable placeholder. When ready, replace this span with: <a href="YOUR_DEMO_URL" class="project-btn project-btn--demo" target="_blank" rel="noopener noreferrer" aria-label="Backend Ledger API Live Demo">...</a> -->
+              <span
+                class="project-btn project-btn--disabled"
+                aria-disabled="true"
+                title="Live demo pending"
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                  ></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span>Demo (Pending)</span>
+              </span>
+            </div>
+          </article>
+
+          <!-- Project 2: GenLoop -->
+          <article class="project-card">
+            <div class="project-number">[02]</div>
+            <h3 class="project-title">GenLoop</h3>
+            <div class="project-meta">
+              <span>2024</span>
+              <span class="meta-dot">·</span>
+              <span>AI & Full Stack Developer</span>
+            </div>
+            <p class="project-desc">
+              GenLoop is an AI-powered website builder that generates website
+              code using large language models through the OpenRouter API and
+              DeepSeek. It processes AI-generated responses and handles
+              malformed JSON and Markdown-wrapped outputs to ensure reliable
+              code generation. Built to simplify web development, GenLoop helps
+              users accelerate website creation through AI-assisted development.
+            </p>
+            <div class="project-tags">
+              <span class="tag">AI Builder</span>
+              <span class="tag">DeepSeek</span>
+              <span class="tag">OpenRouter API</span>
+              <span class="tag">LLMs</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">React</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/Mayank30-eng/GenLoop"
+                class="project-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GenLoop GitHub repository"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.05.78 2.13v3.16c0 .31.21.68.79.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"
+                  ></path>
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://ai-website-builder-1-jzbi.onrender.com/"
+                class="project-btn project-btn--demo"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GenLoop Live Demo"
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                  ></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3: WanderLust -->
+          <article class="project-card">
+            <div class="project-number">[03]</div>
+            <h3 class="project-title">WanderLust</h3>
+            <div class="project-meta">
+              <span>2024</span>
+              <span class="meta-dot">·</span>
+              <span>Full Stack Developer</span>
+            </div>
+            <p class="project-desc">
+              A full-stack vacation rental web app for listing, searching,
+              reviewing, and reserving stays with authentication, Cloudinary
+              image uploads, MongoDB, and Mapbox maps.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Cloudinary</span>
+              <span class="tag">Mapbox</span>
+              <span class="tag">REST API</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/Mayank30-eng/WanderLust-main-2"
+                class="project-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WanderLust GitHub repository"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.05.78 2.13v3.16c0 .31.21.68.79.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"
+                  ></path>
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://wanderlust-main-ow9l.onrender.com/listings"
+                class="project-btn project-btn--demo"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WanderLust Live Demo"
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                  ></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 4: HabitFlow -->
+          <article class="project-card">
+            <div class="project-number">[04]</div>
+            <h3 class="project-title">HabitFlow</h3>
+            <div class="project-meta">
+              <span>2024</span>
+              <span class="meta-dot">·</span>
+              <span>Frontend Developer</span>
+            </div>
+            <p class="project-desc">
+              Modern habit tracking dashboard with streak visualization,
+              progress charts (Recharts), smooth Framer Motion animations, and a
+              responsive UI. Built with React, TypeScript, and Tailwind CSS.
+            </p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Vite</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Recharts</span>
+              <span class="tag">Framer Motion</span>
+            </div>
+            <div class="project-links">
+              <a
+                href="https://github.com/Mayank30-eng/Momentum"
+                class="project-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HabitFlow GitHub repository"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.05.78 2.13v3.16c0 .31.21.68.79.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"
+                  ></path>
+                </svg>
+                <span>GitHub</span>
+              </a>
+              <a
+                href="https://momentum-73a9.onrender.com/"
+                class="project-btn project-btn--demo"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="HabitFlow Live Demo"
+              >
+                <svg
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                  ></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ═══════════ SKILLS SECTION ═══════════ -->
+      <section class="section" id="skills">
+        <div class="section-header">
+          <div>
+            <div class="section-label">
+              <span class="accent">03</span>TECH STACK
+            </div>
+            <h2 class="section-title">Skills & technologies</h2>
+          </div>
+          <div class="section-aside">
+            ~/skills<br />
+            <span class="text-faint">grouped by domain</span>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Backend -->
+          <div class="skill-group">
+            <div class="skill-group-header">
+              <span class="skill-icon">⚙</span>
+              <h3 class="skill-group-title">Backend</h3>
+            </div>
+            <div class="skill-list">
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">REST APIs</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Mongoose</span>
+              <span class="skill-tag">JWT</span>
+              <span class="skill-tag">bcrypt</span>
+              <span class="skill-tag">Authentication</span>
+              <span class="skill-tag">Authorization</span>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="skill-group">
+            <div class="skill-group-header">
+              <span class="skill-icon">◧</span>
+              <h3 class="skill-group-title">Frontend</h3>
+            </div>
+            <div class="skill-list">
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+              <span class="skill-tag">Tailwind CSS</span>
+              <span class="skill-tag">Vite</span>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="skill-group">
+            <div class="skill-group-header">
+              <span class="skill-icon">◉</span>
+              <h3 class="skill-group-title">Database</h3>
+            </div>
+            <div class="skill-list">
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">MySQL</span>
+            </div>
+          </div>
+
+          <!-- Programming -->
+          <div class="skill-group">
+            <div class="skill-group-header">
+              <span class="skill-icon">λ</span>
+              <h3 class="skill-group-title">Programming</h3>
+            </div>
+            <div class="skill-list">
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">Java</span>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-group">
+            <div class="skill-group-header">
+              <span class="skill-icon">⊞</span>
+              <h3 class="skill-group-title">Tools & DevOps</h3>
+            </div>
+            <div class="skill-list">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Redis</span>
+              <span class="skill-tag">API Integration</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════ CONTACT SECTION ═══════════ -->
+      <section class="section" id="contact">
+        <div class="section-header">
+          <div>
+            <div class="section-label">
+              <span class="accent">04</span>GET IN TOUCH
+            </div>
+            <h2 class="section-title">Let's build something.</h2>
+          </div>
+          <div class="section-aside">
+            ~/contact<br />
+            <span class="accent">● replies within 24h</span>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: info -->
+          <div class="contact-info">
+            <a
+              href="mailto:mayankgohiya657@gmail.com"
+              class="contact-email"
+              id="contact-email-link"
+              >mayankgohiya657@gmail.com →</a
+            >
+
+            <div class="contact-details">
+              <div class="contact-row">
+                <span class="contact-label">status</span>
+                <span class="accent">open to opportunities</span>
+              </div>
+              <div class="contact-row">
+                <span class="contact-label">stack</span>
+                <span class="text-bright"
+                  >Node.js / Express / MongoDB / React</span
+                >
+              </div>
+              <div class="contact-row">
+                <span class="contact-label">github</span>
+                <a
+                  href="https://github.com/Mayank30-eng"
+                  class="contact-link-text"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id="contact-github"
+                  >@Mayank30-eng ↗</a
+                >
+              </div>
+              <div class="contact-row">
+                <span class="contact-label">linkedin</span>
+                <a
+                  href="https://www.linkedin.com/in/mayank-gohiya-7b7974250/"
+                  class="contact-link-text"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id="contact-linkedin"
+                  >mayank-gohiya ↗</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: contact form (Web3Forms) -->
+          <form class="contact-form" id="contact-form">
+            <!-- Web3Forms access key — replace YOUR_ACCESS_KEY with your real key -->
+            <input
+              type="hidden"
+              name="access_key"
+              value="ce3262fa-0168-49c9-b26c-7a99115b7d70"
+              id="web3forms-key"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New message from Portfolio"
+            />
+            <input type="hidden" name="from_name" value="Mayank Portfolio" />
+            <!-- Honeypot anti-spam field (hidden from users, bots fill it) -->
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+              tabindex="-1"
+              autocomplete="off"
+            />
+
+            <div class="form-field">
+              <label class="form-label" for="contact-name"
+                >NAME<span class="accent">*</span></label
+              >
+              <input
+                class="form-input"
+                id="contact-name"
+                name="name"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="contact-email"
+                >EMAIL<span class="accent">*</span></label
+              >
+              <input
+                class="form-input"
+                id="contact-email"
+                type="email"
+                name="email"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label class="form-label" for="contact-msg"
+                >MESSAGE<span class="accent">*</span></label
+              >
+              <textarea
+                class="form-textarea"
+                id="contact-msg"
+                name="message"
+                required
+                minlength="10"
+                maxlength="2000"
+                placeholder="What are you building?"
+              ></textarea>
+            </div>
+            <div class="form-footer">
+              <span class="form-hint"
+                >🔒 protected · rate-limited · spam-filtered</span
+              >
+              <button class="btn btn-primary" type="submit" id="contact-submit">
+                send message
+              </button>
+            </div>
+            <div class="form-status" id="form-status"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div>
+        <span>© 2026 Mayank</span>
+        <span class="text-faint"> · built with passion, powered by code</span>
+      </div>
+      <div class="footer-links">
+        <a
+          href="https://github.com/Mayank30-eng"
+          class="footer-link"
+          id="footer-github"
+          target="_blank"
+          rel="noopener noreferrer"
+          >github</a
+        >
+        <a
+          href="https://www.linkedin.com/in/mayank-gohiya-7b7974250/"
+          class="footer-link"
+          id="footer-linkedin"
+          target="_blank"
+          rel="noopener noreferrer"
+          >linkedin</a
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
